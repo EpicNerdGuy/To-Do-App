@@ -1,0 +1,124 @@
+/* Kakegurui-Themed To-Do List Styles */
+
+body {
+    background: url('/public/mary.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Cinzel', serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Dark Overlay for Better Readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Container Styling */
+div {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7);
+    text-align: center;
+    width: 350px;
+}
+
+/* Input Field */
+input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Add Button */
+button {
+    background-color: red;
+    color: white;
+    border: 2px solid gold;
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: black;
+    color: red;
+    box-shadow: 0px 0px 10px red;
+}
+
+/* Task List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Task Items */
+li {
+    background: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 2px solid gold;
+    font-size: 18px;
+}
+
+/* Task Text */
+li span {
+    flex-grow: 1;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Completed Task */
+li.completed span {
+    text-decoration: line-through;
+    color: gold;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: red;
+}
+
+/* Delete Button (X Icon) */
+img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 5px red);
+}
